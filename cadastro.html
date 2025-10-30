@@ -7,48 +7,79 @@
   </head>
   <body>
     <header>
-      <h1>Toicinhos</h1>
+      <h1><a href="index.html">Toicinhos</h1>
       <nav>
         <ul>
           <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="projetos.html">projetos</a></li>
           <li><a href="cadastro.html">Cadastro</a></li>
         </ul>
       </nav>
     </header>
     
     <main>
-      <h2>Cadastro</h2>
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Informações Pessoais</legend>
-          
-          <label for="nome">Nome completo:</label>
-          <input type="text" id="nome" name="nome" required>
-          
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="telefone">Telefone:</label>
-          <input type="tel" id="telefone" name="telefone">
-        </fieldset>
-
-        <fieldset>
-          <legend>Acesso</legend>
-          
-          <label for="senha">Senha:</label>
-          <input type="password" id="senha" name="senha" required minlength="6">
-          
-          <label for="confirma-senha">Confirmar senha:</label>
-          <input type="password" id="confirma-senha" name="confirma-senha" required minlength="6">
-        </fieldset>
-
-        <button type="submit">Cadastrar</button>
-      </form>
-    </main>
-
+      <section>
+        <form id="formProdutor" method="POST">
+          <fieldset>
+            <legend>Cadastro de Produtores</legend>
+            <p>Ao se cadastrar, você ganha acesso a materiais exclusivos, consultoria técnica e descontos em insumos com nossos parceiros. Junte-se a Toicinhos!</p>
+            <p>
+              <label for="name">Nome Completo:</label>
+              <input type ="text" id="name" name="nome" required placeholder="Seu nome Completo">          
+            </p>
+            <p>
+              <label for="email">Seu melhor E-mail:</label>
+              <input type="email" id="email" name="email" required placeholder="exemplo@dominio.com">
+              </p>
+            <p>
+              <label for="cpf_cnpj">CPF ou CNPJ</label>
+              <input type="text" id="cpf_cnpj" name="cpf_cnpj" required placeholder="000.000.000-00 ou 00.000.000/0001-00" minlength="11" maxlength="18">
+            </p>
+            <p>
+              <label for="estado">Estado (UF):</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Selecione seu estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+            </p>
+            <p>
+              <label type="checkbox" id="termos" name="termos" required>
+                Li e aceito os <a href="#termos" target="_blank">Termos de Associação</a>
+              </label>
+            </p>
+          </fieldset>
+          <button type="submit">Quero me Associar</button>
+        </form>
+      </section>
+      </main>     
     <footer>
-      <p>Aqui irei colocar as informações de contato</p>
+      <p>&copy; 2025 Organização Toicinhos. Todos os direitos reservados.</p>
     </footer>
   </body>
 </html>
