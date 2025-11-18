@@ -42,3 +42,40 @@
     --border-radius-md: 8px;
     --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+/* =========================================
+   TEMA DE ALTO CONTRASTE (Acessibilidade)
+   ========================================= */
+body.high-contrast {
+    /* Sobrescreve as variáveis para Preto e Amarelo/Branco */
+    --color-primary: #FFD600;      /* Amarelo Ouro */
+    --color-primary-dark: #FFFFFF; /* Branco para bordas */
+    --color-secondary: #FFFF00;    /* Amarelo vivo */
+    --color-accent: #000000;       
+    
+    --color-text-main: #FFFFFF;    /* Texto Branco */
+    --color-text-light: #E0E0E0;   
+    --color-background: #000000;   /* Fundo Preto Absoluto */
+    --color-white: #121212;        /* Fundo dos cards quase preto */
+    
+    --box-shadow: 0 0 0 2px #FFD600; /* Borda sólida em vez de sombra */
+}
+
+/* Ajustes específicos para links e botões no alto contraste */
+body.high-contrast a {
+    color: #FFD600;
+    text-decoration: underline;
+}
+
+body.high-contrast button, 
+body.high-contrast .btn-download {
+    background-color: #FFD600;
+    color: #000000;
+    font-weight: 800;
+    border: 2px solid #FFFFFF;
+}
+
+/* Acessibilidade: Foco visível via teclado */
+:focus {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 2px;
+}
