@@ -1,8 +1,11 @@
 const App = {
+    
+    
     // Inicia a aplicação
     init: () => {
         // Carrega a página inicial por padrão
         App.render('home');
+        App.setupAccessibility(); //
 
         // Adiciona evento de clique nos links do menu
         const links = document.querySelectorAll('.nav-link');
@@ -39,7 +42,25 @@ const App = {
         // Scroll suave para o topo
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    ,setupAccessibility: () => {
+        // Como o header é re-renderizado, usamos delegação de eventos no body
+        document.body.addEventListener('click', (e) => {
+            if (e.target.id === 'toggle-contrast') {
+                document.body.classList.toggle('high-contrast');
+                
+                // Salva a preferência do usuário (LocalStorage)
+                const isHighContrast = document.body.classList.contains('high-contrast');
+                localStorage.setItem('highContrast', isHighContrast);
+            }
+        });
+
+        // Carrega preferência salva
+        if (localStorage.getItem('highContrast') === 'true') {
+            document.body.classList.add('high-contrast');
+        }
+    }
 };
+
 
 // Inicia tudo quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', App.init);
