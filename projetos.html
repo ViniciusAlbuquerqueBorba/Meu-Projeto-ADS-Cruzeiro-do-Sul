@@ -4,66 +4,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toicinhos - Projeto Social</title>
+  <title>Toicinhos - Projetos e Editais</title>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
   <header>
-    <h1>
-      <a href="index.html">Toicinhos</a>
-    </h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html" class="active">Projetos</a></li>
-        <li><a href="cadastro.html" class="active">Cadastro</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>
+        <a href="index.html">Toicinhos</a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html" class="active">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-      <main>
-        <section>
-          <h2>Faça Parte da Mudança</h2>
-          <p>Buscamos pessoas comprometidas para expandir nosso impacto. Confira nossos editais abertos:</p>
-          <article>
-            <h3>Edital para Voluntários </h3>
-            <p>Procuramos voluntários nas áreas de Zootecnia, Veterinária e Marketing Digital para apoio remoto aos
-              nossos associados.
-              Seja a diferença na vida ed um Suinocultor.</p>
-            <p> <a href="assets/docs/Edital_Voluntarios.pdf" download="Edital_Voluntarios_2025.pdf">
-    📄 Baixar Edital Completo (PDF) </a></p>
-          </article>
-          <article>
-            <h3>Processo Seletivo - Terceirizados</h3>
-            <p>Estamos contratando serviços de desenvolvimento de software (PJ), para criação de um aplicativo de manejo
-              de rebanho.</p>
-            <p> <a href="assets/docs/Edital_Terceirizados.pdf" download="Edital_Voluntarios_2025.pdf">
-    📄 Baixar Edital Completo (PDF) </a></p>
-          </article>
-        </section>
-        <section>
-          <h2>Apoie Nossa Causa</h2>
-          <p>Sua Doação é fundamental para mantermos nossos projetos ativos. Com ela, financiamos treinamentos,
-            compramos insumos emergenciais
-            e desenvolvemos novas tecnologias para produtores</p>
-          <article>
-            <h3>Doe via PIX</h3>
-            <P>Use nossa chave aleatória para doar qualquer valor:</P>
-            <img src="assets/images/codigo_qr.png" alt="imagem de qr code para Transferência da Doação" class="banner-img">
-          
-            <input type="text" id="pix-key" value="29024e84-80b1-411a-9ecc-b4bc27e86897" readonly>
-            </article>
-          <article>
-            <h3>Transferência Bancária</h3>
-            <p>Banco Porco Nordeste</p>
-            <p>Agência: 0238 | Conta Corrente: 56789-0</p>
-            <p>CNPJ : 00.123.456/0001-78</p>
-          </article>
-        
-        </section>
-      </main>
-      <footer>
-        <p>&copy; 2025 Organização Toicinhos. Todos direitos reservados.</p>
-      </footer>
+
+  <main class="container">
     
+    <section>
+      <h2>Faça Parte da Mudança</h2>
+      <p>Buscamos pessoas comprometidas para expandir nosso impacto. Confira nossos editais abertos:</p>
+      
+      <div class="grid-12">
+        
+        <article class="col-6 card">
+          <h3>Edital para Voluntários</h3>
+          <img src="assets/images/Pessoas_trabalhando_juntas (1).png" alt="Pessoas trabalhando juntas" class="card-img">
+          <p>Procuramos voluntários nas áreas de Zootecnia, Veterinária e Marketing Digital para apoio remoto aos nossos associados. Seja a diferença na vida de um Suinocultor.</p>
+          <p> 
+            <a href="assets/docs/Edital_Voluntarios.pdf" download class="btn-download">
+              📄 Baixar Edital (PDF) 
+            </a>
+          </p>
+        </article>
+
+        <article class="col-6 card">
+          <h3>Processo Seletivo - Terceirizados</h3>
+          <img src="assets/images/Tecnologia_no_campo (1).png" alt="Desenvolvimento de tecnologia no campo" class="card-img">
+          <p>Estamos contratando serviços de desenvolvimento de software (PJ), para criação de um aplicativo de manejo de rebanho.</p>
+          <p> 
+            <a href="assets/docs/Edital_Terceirizados.pdf" download class="btn-download">
+              📄 Baixar Edital (PDF) 
+            </a>
+          </p>
+        </article>
+      
+      </div> </section>
+
+    <section>
+      <h2>Apoie Nossa Causa</h2>
+      <p>Sua Doação é fundamental para mantermos nossos projetos ativos.</p>
+      
+      <div class="grid-12">
+        
+        <article class="col-6 card">
+          <h3>Doe via PIX</h3>
+          <p>Use nossa chave aleatória ou escaneie o QR Code:</p>
+          <img src="assets/images/codigo_qr.png" alt="QR Code para Transferência da Doação" style="max-width: 150px; margin: 10px auto;">
+          
+          <label for="pix-key">Chave:</label>
+          <input type="text" id="pix-key" value="29024e84-80b1-411a-9ecc-b4bc27e86897" readonly style="width: 100%;">
+        </article>
+
+        <article class="col-6 card">
+          <h3>Transferência Bancária</h3>
+          <p><strong>Banco Porco Nordeste</strong></p>
+          <p>Agência: 0238</p>
+          <p>Conta Corrente: 56789-0</p>
+          <p>CNPJ: 00.123.456/0001-78</p>
+        </article>
+      
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Organização Toicinhos. Todos direitos reservados.</p>
+  </footer>
+
 </body>
 </html>

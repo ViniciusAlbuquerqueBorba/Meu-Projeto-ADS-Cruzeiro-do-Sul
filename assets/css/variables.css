@@ -1,0 +1,44 @@
+/* DESIGN SYSTEM - TOICINHOS */
+:root {
+    /* 1. PALETA DE CORES (Mínimo 8 cores exigidas) */
+    /* Cores Primárias (Identidade) */
+    --color-primary: #2E7D32;      /* Verde Floresta (Confiança/Agro) */
+    --color-primary-dark: #1B5E20; /* Verde Escuro (Hover/Bordas) */
+    
+    /* Cores Secundárias (Destaque) */
+    --color-secondary: #D84315;    /* Terracota (Ação/Botões) */
+    --color-accent: #F8BBD0;       /* Rosa Suave (Detalhes/Fundo leve) */
+
+    /* Cores Neutras (Texto e Fundo) */
+    --color-text-main: #212121;    /* Preto Suave (Leitura) */
+    --color-text-light: #757575;   /* Cinza (Legendas) */
+    --color-background: #F5F5F5;   /* Branco Gelo (Fundo Geral) */
+    --color-white: #FFFFFF;        /* Branco Puro (Cards) */
+
+    /* Feedback (Sucesso/Erro) */
+    --color-success: #4CAF50;
+    --color-error: #D32F2F;
+
+    /* 2. TIPOGRAFIA HIERÁRQUICA (Mínimo 5 tamanhos) */
+    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    
+    --font-size-xs: 0.75rem;   /* 12px - Legendas pequenas */
+    --font-size-sm: 0.875rem;  /* 14px - Textos secundários */
+    --font-size-md: 1rem;      /* 16px - Texto padrão (Corpo) */
+    --font-size-lg: 1.25rem;   /* 20px - Subtítulos */
+    --font-size-xl: 2rem;      /* 32px - Títulos de seção */
+    --font-size-xxl: 3rem;     /* 48px - Título Principal (Hero) */
+
+    /* 3. ESPAÇAMENTO MODULAR (Escala de 8px) */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+
+    /* 4. BORDAS E SOMBRAS (UI Kit) */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}

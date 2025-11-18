@@ -4,113 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toicinhos - Cadastro</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
     <header>
-      <h1><a href="index.html">Toicinhos</a></h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-        </ul>
-      </nav>
+      <div class="container">
+        <h1><a href="index.html">Toicinhos</a></h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="cadastro.html" class="active">Cadastro</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     
-    <main>
-      
+    <main class="container">
       <section>
-        <h2>Junte-se à Toicinhos - Cadastre-se como Produtor Associado</h2>
+        <h2>Junte-se à Toicinhos</h2>
+        
         <form id="formProdutor" method="POST">
           <fieldset>
             <legend>Cadastro de Produtores</legend>
-            <p>Ao se cadastrar, você ganha acesso a materiais exclusivos, consultoria técnica e descontos em insumos com nossos parceiros. Junte-se a Toicinhos!</p>
-            <p>
-              <label for="name">Nome Completo:</label>
-              <input type ="text" id="name" name="nome" required placeholder="Seu nome Completo">          
-            </p>
-            <p>
-              <label for="email">Seu melhor E-mail:</label>
-              <input type="email" id="email" name="email" required placeholder="exemplo@dominio.com">
-              </p>
-            <p>
-              <label for="cpf_cnpj">CPF ou CNPJ</label>
-              <input type="text" id="cpf_cnpj" name="cpf_cnpj" required placeholder="000.000.000-00 ou 00.000.000/0001-00" minlength="11" maxlength="18">
-            </p>
-            <p>
-    <label for="nascimento">Data de Nascimento:</label>
-    <input type="date" id="nascimento" name="nascimento" required>
-</p>
+            <p class="form-description">Ao se cadastrar, você ganha acesso a materiais exclusivos e consultoria técnica.</p>
+            
+            <div class="grid-12">
+                
+                <div class="col-12 form-group">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" name="nome" required placeholder="Seu nome Completo">          
+                </div>
 
-  <p>
-    <label for="telefone">Telefone/Celular:</label>
-    <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" 
-           pattern="\(\d{2}\) \d{4,5}-\d{4}" title="(xx) xxxxx-xxxx" required>
-  </p>
+                <div class="col-12 form-group">
+                    <label for="email">Seu melhor E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="exemplo@dominio.com">
+                </div>
 
-  <p>
-    <label for="cep">CEP:</label>
-    <input type="text" id="cep" name="cep" placeholder="00000-000" 
-           pattern="\d{5}-\d{3}" title="00000-000" required>
-  </p>
+                <div class="col-6 form-group">
+                    <label for="cpf_cnpj">CPF ou CNPJ:</label>
+                    <input type="text" id="cpf_cnpj" name="cpf_cnpj" required 
+                           placeholder="000.000.000-00" 
+                           minlength="11" maxlength="18"
+                           pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                           title="Formato: 000.000.000-00">
+                </div>
 
-  <p>
-    <label for="endereco">Endereço Completo:</label>
-    <input type="text" id="endereco" name="endereco" required>
-  </p>
+                <div class="col-6 form-group">
+                    <label for="nascimento">Data de Nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+                </div>
 
-  <p>
-    <label for="cidade">Cidade:</label>
-    <input type="text" id="cidade" name="cidade" required>
-  </p>
-            <p><img src="assets/images/Gemini_Generated_Image_rwomeprwomeprwom.png" 
-              alt="Imagem ilustrativa do mapa do brasil com a marcação dos locais onde se encontram as sedes do programa ilustrada por pequenos porcos" class="banner-img"></p>
-            <p>
-              <label for="estado">Estado (UF):</label>
-                        <select id="estado" name="estado" required>
-                            <option value="">Selecione seu estado</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                        </select>
-            </p>
-            <p>
-              <p>
-    <input type="checkbox" id="termos" name="termos" required>
-    
-    <label for="termos">
-        Li e aceito os <a href="#termos" target="_blank">Termos de Associação</a>
-    </label>
-</p>
-          </fieldset>
-          <button type="submit">Quero me Associar</button>
+                <div class="col-6 form-group">
+                    <label for="telefone">Telefone/Celular:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" 
+                           pattern="\(\d{2}\) \d{4,5}-\d{4}" title="(xx) xxxxx-xxxx" required>
+                </div>
+                
+                <div class="col-6 form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" placeholder="00000-000" 
+                           pattern="\d{5}-\d{3}" title="00000-000" required>
+                </div>
+
+                <div class="col-12 form-group">
+                    <label for="endereco">Endereço Completo:</label>
+                    <input type="text" id="endereco" name="endereco" required>
+                </div>
+
+                <div class="col-8 form-group">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required>
+                </div>
+
+                <div class="col-4 form-group">
+                    <label for="estado">Estado (UF):</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </div>
+
+                <div class="col-12 form-group">
+                    <img src="assets/images/Gemini_Generated_Image_rwomeprwomeprwom.png" 
+                         alt="Mapa do Brasil com sedes do programa ilustrada por porcos" 
+                         class="banner-img" 
+                         style="max-width: 100%; height: auto; margin-top: 20px;">
+                </div>
+
+                <div class="col-12 form-group checkbox-group">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">
+                        Li e aceito os <a href="#termos" target="_blank">Termos de Associação</a>
+                    </label>
+                </div>
+
+            </div> </fieldset>
+          
+          <button type="submit" class="btn-submit">Quero me Associar</button>
         </form>
       </section>
-      </main>     
+    </main>     
+    
     <footer>
       <p>&copy; 2025 Organização Toicinhos. Todos os direitos reservados.</p>
     </footer>
