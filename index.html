@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toicinhos - Início</title>
+    <title>Toicinhos - Plataforma Digital</title>
+    
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -11,47 +12,26 @@
   <body>
     <header>
       <div class="container">
-        <h1><a href="index.html">Toicinhos</a></h1>
+        <h1><a href="#" class="nav-link" data-target="home">Toicinhos</a></h1>
         <nav>
           <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="#" class="nav-link active" data-target="home">Início</a></li>
+            <li><a href="#" class="nav-link" data-target="projetos">Projetos</a></li>
+            <li><a href="#" class="nav-link" data-target="cadastro">Cadastro</a></li>
           </ul>
         </nav>
       </div>
     </header>
     
-    <main class="container">
-      <section>
-        <h2>Apoiando o Suinocultor Brasileiro</h2>
-        <img src="assets/images/Banner.porco.png" alt="Banner ilustrativo com criação de suínos" class="banner-img">
-        <p>A <strong>Toicinhos</strong> é uma organização do terceiro setor dedicada a fortalecer a Suinocultura no Brasil. Nossa missão é fornecer apoio técnico, logístico e educacional aos pequenos e médios produtores de suínos em todo o território nacional.</p>
-        <p>Acreditamos que, com união e tecnologia, podemos garantir um setor mais justo, sustentável e lucrativo para todos os envolvidos nessa cadeia produtiva.</p>
-      </section>
-      
-      <section>
-        <h2>Entre em contato</h2>
-        <p>Estamos prontos para ouvir você. Seja para dúvidas, parcerias ou apoio, nossa equipe esta a disposição.</p>
-        <h3>Informações de Contato</h3>
-
-        <address>       
-          <dl>
-            <dt>E-mail:</dt>
-            <dd><a href="mailto:contato@toicinhos.org.br">contato@toicinhos.org.br</a></dd>
-            
-            <dt>Telefone:</dt>
-            <dd><a href="tel:+5581999117291">(81) 99911-7291</a></dd>
-
-            <dt>Sede</dt>
-            <dd>Macaparana, PE, Brasil</dd>
-          </dl>
-        </address> 
-      </section>
-    </main>
+    <main id="app" class="container">
+        </main>
     
     <footer>
       <p>&copy; 2025 Organização Toicinhos. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="assets/js/templates.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
